@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: black;
+            gap: 20px;
+            background-color: lightslategray;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            width: fit-content;
+            height: 100px;
+            padding: 10px;
+            font-size: 30px;
+            font-weight: 900;
+            background-color: white;
+        }
+        button{
+            padding: 10px;
+            font-size: 20px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div id="quote"></div>
+    <button onclick="getQuote()">Get Quote</button>
+
+<script>
+
+    let quote=document.getElementById("quote")
+
+const quotes = [
+"నీవు నీ జీవితాన్ని ఎలా చూస్తావో, అదే నీ శక్తి.",
+"సమస్యలు ఎదురైనా, నువ్వు ఎప్పుడూ నీ మార్గం మర్చిపోకు.",
+"మహిళలు అనేది శక్తి, వారు ఏది చేయగలరో తెలిసి ఉండాలి.",
+"మీరు మీ కలల కోసం పోరాడండి, ఎవరూ మీకు అడ్డుకట్ట వేయలేరు.",
+"స్వతంత్రంగా జీవించడానికి మీకు అర్హత ఉంది.",
+"ప్రేమ అనేది ఒక పూలు, అది పండించడానికి శ్రద్ధ అవసరం." ,
+"జీవితంలో సవాళ్లను ఎదుర్కోవడం మన బలాన్ని పెంచుతుంది." ,
+"సమయం విలువైనది, దాన్ని వృథా చేయకండి." ,
+"విజయం అనేది కష్టపడి పనిచేయడం ద్వారా సాధించబడుతుంది." ,
+"సంతోషం అనేది మన మనసులోనే ఉంది." 
+
+
+        ];
+    function getQuote(){
+         let singleQuote=Math.floor(Math.random() * quotes.length)
+         console.log(singleQuote);
+         quote.textContent=quotes[singleQuote]
+    }
+</script>
+</body>
+</html>
+
